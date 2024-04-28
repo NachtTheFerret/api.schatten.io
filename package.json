@@ -14,7 +14,8 @@
     "docs": "typedoc src/index.ts --out docs --plugin typedoc-plugin-markdown",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "dev": "nodemon --exec ts-node-dev --respawn --transpile-only src/index.ts"
+    "dev": "nodemon --exec ts-node-dev --respawn --transpile-only src/index.ts",
+    "start": "node dist/index.js"
   },
   "license": "ISC",
   "dependencies": {
