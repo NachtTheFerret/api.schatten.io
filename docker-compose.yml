@@ -1,0 +1,18 @@
+services:
+  api:
+    container_name: schatten-main-api
+    build: .
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/home/node/app
+    networks:
+      - reverse-proxy
+      - schatten-network
+networks:
+  reverse-proxy:
+    external: true
+    name: reverse-proxy
+  schatten-network:
+    external: true
+    name: schatten-network
